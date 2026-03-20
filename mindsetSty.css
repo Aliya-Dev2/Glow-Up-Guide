@@ -1,0 +1,41 @@
+.primaryButton{
+     ;
+    border-radius: 10px;
+    background-color:  rgb(198, 140, 119);
+    text-align: center;
+    font-size: 20px;
+
+}
+.bgContainer{
+
+    background-color:rgb(226, 209, 209);
+}
+.button:hover{
+
+    background-color:rgb(131, 92, 92);
+}
+.progBar{
+    height: 100px;
+    background-color: rgb(150, 105, 105);
+    width: 60%;
+}
+.pic{
+
+    margin-left: auto;;
+    margin-bottom:auto;
+
+    
+    width: 70px;
+}
+.bg{
+    
+    background-image: url("Mindset.png");
+}
+.bgContainer2{
+
+    background-color: rgba(235, 203, 171, 0.838);
+}
+.font{
+
+    font-style:oblique;
+}

@@ -1,0 +1,26 @@
+.bg{
+
+    background-image: url("SkinCare.png");
+    background-repeat: repeat;
+}
+
+
+.bg1:hover{
+
+    background-color: rgb(225, 169, 132);
+}
+.bg2:hover{
+    background-color: rgb(244, 213, 222);
+}
+.btnHover:hover{
+
+    background-color: rgb(245, 194, 162);
+}
+.btnBg{
+    background-color: aliceblue;
+}
+.pics{
+
+    height: 170px;
+    
+}

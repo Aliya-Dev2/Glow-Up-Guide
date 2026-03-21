@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+<style>
+   
+    .style-table {
+        background-color: transparent !important; ;
+        margin-top: 15px;
+    }
+
+    .style-table th {
+        color: #8c4848;
+        width: 30%;
+        font-weight: bold;
+        border-bottom: 1px solid #8c4848;
+    }
+   
+    .style-table td {
+        border-bottom: 1px solid #8c4848;
+        color: #333;
+    }
+   .btn-pill {
+    border: 2px solid rgb(101, 68, 68);
+    border-radius: 50px;
+    padding: 5px 20px;
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    transition: 0.3s;
+    }
+
+</style>
+
+<body>
+     <div class="container-fluid"></div>
+      <nav class="navbar navbar-expand-sm" style="background-color: rgb(250, 181, 135);">
+        <ul class="navbar-nav">
+           <li class="nav-item"><a class="nav-link" href="Index.html">Home</a></li>
+           <li class="nav-item"><a class="nav-link" href="AboutsUs.html">About us</a></li>
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Glow Guide</a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
+                <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
+                <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
+                <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
+                <li><a class="dropdown-item" href="Style.html">Style</a></li>
+              </ul>
+
+            </li>
+           <li class="nav-item"><a class="nav-link" href="ContactsUs.html">Contact Us</a></li>
+        </ul>
+        <a class="ms-auto" href="#">
+            <img src="Logo.jpeg" alt="Logo" style="height: 40px;">
+        </a>
+       </nav>
+    </div>
+
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h1 style="color: #bd7e5f;">Style</h1>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <p class="lead" style="color: #555;">
+                    Your personal style is a reflection of who you are, so choosing colors, outfits and accessories that match your personality can boost confidence and make a lasting impression.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="style1.avif" class="img-fluid rounded shadow" alt="Main Style">
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <img src="undertones.jpg" class="img-fluid rounded shadow" alt="Undertones">
+            </div>
+            <div class="col-md-6 text-center">
+                <p class="lead" style="color: #555;">
+                    Finding your undertone helps you choose clothing, makeup and accessories that naturally complement your overall look and glow.
+                </p>
+                <button class="btn-pill">Find my undertone</button>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+        <div class="style-section">
+            <h2 class="style-header text-center">Cool Undertone</h2>
+            <table class="table style-table">
+                <tr>
+                    <th>Best Colors</th>
+                    <td>Emerald, Lavender, Royal Blue, Silver, Ruby Red</td>
+                </tr>
+                <tr>
+                    <th>Style Tips</th>
+                    <td>Choose silver jewelry. Stick to jewel tones to brighten your skin.</td>
+                </tr>
+                <tr>
+                    <th>Avoid</th>
+                    <td>Orange, Mustard Yellow and Warm Golds.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-6 text-center">
+        <img src="cool.jpeg" class="img-fluid rounded shadow" alt="Cool Style">
+    </div>
+</div>
+
+<div class="row align-items-center mb-5">
+    <div class="col-md-6 text-center">
+        <img src="warm.jpeg" class="img-fluid rounded shadow" alt="Warm Style">
+    </div>
+    <div class="col-md-6">
+        <div class="style-section">
+            <h2 class="style-header text-center">Warm Undertone</h2>
+            <table class="table style-table">
+                <tr>
+                    <th>Best Colors</th>
+                    <td>Honey Gold, Olive Green, Peach, Cream, Terracotta</td>
+                </tr>
+                <tr>
+                    <th>Style Tips</th>
+                    <td>Gold jewelry is your best friend. Earthy tones make you glow.</td>
+                </tr>
+                <tr>
+                    <th>Avoid</th>
+                    <td>Icy Blues and Neon Pinks.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row align-items-center mb-5">
+    <div class="col-md-6">
+        <div class="style-section">
+            <h2 class="style-header text-center">Neutral Undertone</h2>
+            <table class="table style-table">
+                <tr>
+                    <th>Best Colors</th>
+                    <td>Dusty Rose, Jade Green, Navy, Off-White, Soft Grey</td>
+                </tr>
+                <tr>
+                    <th>Style Tips</th>
+                    <td>You can wear both Gold and Silver! Muted tones look best.</td>
+                </tr>
+                <tr>
+                    <th>Avoid</th>
+                    <td>Anything too neon that might overwhelm your balance.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-6 text-center">
+        <img src="neutral.jpeg" class="img-fluid rounded shadow" alt="Neutral Style">
+    </div>
+</div>
+
+
+    
+</body>
+</html>

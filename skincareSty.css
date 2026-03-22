@@ -1,7 +1,8 @@
-.bg{
 
-    background-image: url("SkinCare.png");
-    background-repeat: repeat;
+
+.padding{
+
+    padding: 20px;
 }
 
 
@@ -24,3 +25,4 @@
     height: 170px;
     
 }
+

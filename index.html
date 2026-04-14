@@ -33,6 +33,7 @@
                   <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
                 </li>
 
+              <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
             </ul>
 
             <img src="Logo.jpeg" alt="Logo" height="40">
@@ -155,24 +156,36 @@
 
 
     <div class="fixed-bottom bg-warning text-center p-2">
-        <marquee id="welcomeText"></marquee>
+        <marquee id="welcomeText"></marquee>  <!-- this tag makes moving pictures-->
     </div>
 
 
     <script>
     function updateBanner() {
+       //create a date object
         var now = new Date();
 
-        var date = now.toLocaleDateString();
-        var time = now.toLocaleTimeString();
+        //get day,month and year
+        var day = now.getDate();
+        var month = now.getMonth() + 1; 
+        var year = now.getFullYear();
 
-        var message = "Welcome to the Glow Guide website! Today is " 
-                      + date + ", and the time is " + time;
+        //get hours,minutes and seconds
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
 
-        document.getElementById("welcomeText").innerText = message;
+        //store date and time into variables
+        var date = day + "/" + month + "/" + year;
+        var time = hours + ":" + minutes + ":" + seconds;
+
+        //banner output
+        document.getElementById("welcomeText").innerText =
+            "Date: " + date + " | Time: " + time;
     }
 
     updateBanner();
+    //the banner updates every 1 second
     setInterval(updateBanner, 1000);
     </script>
 

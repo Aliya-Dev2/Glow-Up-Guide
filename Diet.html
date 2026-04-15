@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styleSheet.css">
 </head>
 <style>
         body {
             background-color: #f5e7e7;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Franklin Gothic Medium', sans-serif;
         }
 
         
@@ -22,54 +21,26 @@
             height: 300px; 
             border: 1px solid rgb(87, 63, 63);
             border-radius: 15px;
-            margin-bottom: 40px;
             display: flex;
             justify-content: center; 
             align-items: center;
-            text-align: center;
+            color:#703e3e;
         }
-        .top-bg h1 {
-            color: #703e3e;
-            font-size: 50px;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-
-
         
         .diet-button {
             background-color: #ffffff;
             border: 3px solid #8c4848;
             padding: 30px 15px;
-            text-align: center;
             border-radius: 15px;
             height: 100%;
-            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0;
-            font-size: 1.2rem;
-            color: #333;
-            background-color: #f9b89a;
+            transition: transform 0.2s;
         }
-
-        .progress-container {
-            border: 2px solid black;
-            border-radius: 20px;
-            height: 25px;
-            background-color: #eee;
-            margin-bottom: 10px;
-           
+        .diet-button:hover{
+            transform: scale(1.05);
         }
-
-        .progress-fill {
-            background: #dc9e9e;
-            height: 100%;
-            border-radius: 20px;
-        }
-
-    
         .hydration-circle {
             width: 150px; 
             height: 150px; 
@@ -85,33 +56,42 @@
     </style>
 <body>
      <div class="container-fluid"></div>
-      <nav class="navbar navbar-expand-sm" style="background-color: rgb(250, 181, 135);">
-        <ul class="navbar-nav">
-           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-           <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Glow Guide</a>
+      <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+        <div class="container-fluid">
 
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
-                <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
-                <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
-                <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
-                <li><a class="dropdown-item" href="Style.html">Style</a></li>
-              </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Glow Guide</a>
 
-            </li>
-           <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
-        </ul>
-        <a class="ms-auto" href="#">
-            <img src="Logo.jpeg" alt="Logo" style="height: 40px;">
-        </a>
-       </nav>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
+                  <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
+                  <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
+                  <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
+                  <li><a class="dropdown-item" href="Style.html">Style</a></li>
+
+                </ul>
+
+
+              </li>
+            <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+            <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+            <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+          </ul>
+          <a class="ms-auto" href="#">
+              <img src="Logo.jpeg" alt="Logo" style="height: 40px;">
+          </a>
+
+        </div>
+      </nav>
     </div>
 <div class="container my-5">
 
       <div class="top-bg" >
-        <h1>Fuel your Glow up</h1>
+        <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">Fuel your Glow up</h1>
       </div>
 
         <div class="row mb-5">
@@ -138,44 +118,47 @@
             <div class="col-md-6 text-center">
                 <h3 class="mb-4">Calorie Tracker</h3>
                 
-                <div class="progress-container">
-                    <div id="calorie-bar" class="progress-fill" style="width: 50%;"></div>
+                <p class="mb-1">Calories (900/1800 Kcal)</p>
+                <div class="progress mb-4" style="height: 25px;">
+                 <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #dc9e9e;"></div>
                 </div>
-                <p>900/1800 Kcal consumed</p>
 
-                <div class="progress-container">
-                    <div id="protein-bar" class="progress-fill" style="width: 50%;"></div>
+                <p class="mb-1">Protein (50/100g)</p>
+                <div class="progress mb-4" style="height: 25px;">
+                 <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #dc9e9e;"></div>
                 </div>
-                <p>50/100 grams of protein consumed</p>
             </div>
 
             <div class="col-md-6 text-center">
-                <h3>Current Hydration</h3>
-                <div class="hydration-circle">
-                    <h2 class="mb-0">50%</h2>
-                    <small>1000mL</small>
+             <h3>Current Hydration</h3>
+             <div class="hydration-circle">
+                 <h2 class="mb-0">50%</h2>
+                 <h6>1000mL</h6>
                 </div>
             </div>
         </div>
     </div>
     <div class="row mt-5">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-6 offset-md-3 border p-4 rounded bg-white shadow-sm mb-5">
         <h3 class="text-center mb-4">Your Details</h3>
 
-        <form>
+        <form onsubmit="checkMyForm(event)" class="needs-validation" novalidate>
             <div class="mb-3">
                 <label for="age" class="form-label">Age</label>
-                <input type="number" class="form-control" id="age" placeholder="Enter your age">
+                <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
+                <div class="invalid-feedback">Please provide your age.</div>
             </div>
 
             <div class="mb-3">
                 <label for="height" class="form-label">Height (cm)</label>
-                <input type="number" class="form-control" id="height" placeholder="Enter your height">
+                <input type="number" class="form-control" id="height" placeholder="Enter your height" required>
+                <div class="invalid-feedback">Please provide your height.</div>
             </div>
 
             <div class="mb-3">
                 <label for="weight" class="form-label">Weight (kg)</label>
-                <input type="number" class="form-control" id="weight" placeholder="Enter your weight">
+                <input type="number" class="form-control" id="weight" placeholder="Enter your weight" required>
+                <div class="invalid-feedback">Please provide your weight.</div>
             </div>
 
             <div class="text-center">
@@ -185,13 +168,28 @@
             </div>
         </form>
     </div>
- </div>
+</div>
+
+<script>
+  function checkMyForm(event) {
+    var age = document.getElementById("age").value;
+    var height = document.getElementById("height").value;
+    var weight = document.getElementById("weight").value;
+
+    if (age == "" || height == ""  || weight == "") {
+      event.preventDefault();
+      alert("Please fill in all the details!");
+    } else {
+      alert("Form submitted successfully!");
+    }
+  }
+</script>
 
  <br>   
- <div class="footer">
-    <div class="row">
-        <div class="col" style="background-color: rgb(250, 181, 135);"> GlowGuideCommunity@gmail.com</div>
-    </div>
-</div>
+  <footer class="bg-warning text-center py-3">
+      <div class="container">
+          GlowGuideCommunity@gmail.com
+      </div>
+    </footer>
 </body>
 </html>

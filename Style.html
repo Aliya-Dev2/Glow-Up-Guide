@@ -4,63 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styleSheet.css">
+
 </head>
-<style>
+
    
-    .style-table {
-        background-color: transparent !important; ;
-        margin-top: 15px;
-    }
+   <style>
+        body { 
+        background-color: transparent !important; 
+        font-family: 'Franklin Gothic Medium', Arial, sans-serif; 
+        }
+        .style-table {
+            background-color: transparent !important;
+            margin-top: 15px;
+        }
 
-    .style-table th {
-        color: #8c4848;
-        width: 30%;
-        font-weight: bold;
-        border-bottom: 1px solid #8c4848;
-    }
-   
-    .style-table td {
-        border-bottom: 1px solid #8c4848;
-        color: #333;
-    }
-   .btn-pill {
-    border: 2px solid rgb(101, 68, 68);
-    border-radius: 50px;
-    padding: 5px 20px;
-    cursor: pointer;
-    background: rgb(255, 255, 255);
-    transition: 0.3s;
-    }
+        .style-table th {
+            color: #8c4848;
+            width: 30%;
+            font-weight: bold;
+            border-bottom: 1px solid #8c4848;
+        }
+        .btn-pill {
+            border: 2px solid rgb(101, 68, 68); border-radius: 50px;
+            padding: 5px 20px; cursor: pointer; background: white; transition: 0.3s;
+        }
+        .btn-pill:hover {
+             background-color: #f9b89a; 
+        }
+        html {
+          scroll-behavior: smooth;
+        }
 
-</style>
-
+        
+    </style>
+</head>
 <body>
-     <div class="container-fluid"></div>
-      <nav class="navbar navbar-expand-sm" style="background-color: rgb(250, 181, 135);">
-        <ul class="navbar-nav">
-           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-           <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Glow Guide</a>
+       <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+        <div class="container-fluid">
 
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
-                <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
-                <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
-                <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
-                <li><a class="dropdown-item" href="Style.html">Style</a></li>
-              </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Glow Guide</a>
 
-            </li>
-           <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
-        </ul>
-        <a class="ms-auto" href="#">
-            <img src="Logo.jpeg" alt="Logo" style="height: 40px;">
-        </a>
-       </nav>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
+                  <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
+                  <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
+                  <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
+                  <li><a class="dropdown-item" href="Style.html">Style</a></li>
+
+                </ul>
+
+
+              </li>
+            <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+            <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+            <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+          </ul>
+          <a class="ms-auto" href="#">
+              <img src="Logo.jpeg" alt="Logo" style="height: 40px;">
+          </a>
+
+        </div>
+      </nav>
     </div>
 
     <div class="container my-5">
@@ -70,12 +81,21 @@
 
         <div class="row align-items-center mb-5">
             <div class="col-md-6">
-                <p class="lead" style="color: #555;">
+                <p class="lead">
                     Your personal style is a reflection of who you are, so choosing colors, outfits and accessories that match your personality can boost confidence and make a lasting impression.
                 </p>
             </div>
             <div class="col-md-6">
                 <img src="style1.avif" class="img-fluid rounded shadow" alt="Main Style">
+            </div>
+        </div>
+
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Type Cool, Warm, or Neutral...">
+                    <button class="btn btn-pill" type="button" onclick="jumpToSection()">Search</button>
+                </div>
             </div>
         </div>
 
@@ -90,88 +110,144 @@
                 <button class="btn-pill">Find my undertone</button>
             </div>
         </div>
+        <hr>
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <div class="style-section" id="section-cool">
+                    <h2 class="text-center" style="color: #8c4848;">Cool Undertone</h2>
+                    <table class="table style-table">
+                        <tr>
+                            <th>Best Colors</th>
+                            <td id="cool-colors"></td>
+                        </tr>
+                        <tr>
+                            <th>Style Tips</th>
+                            <td id="cool-tips"></td>
+                        </tr>
+                        <tr>
+                            <th>Avoid</th>
+                            <td id="cool-avoid"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="cool.jpeg" class="img-fluid rounded shadow" alt="Cool Style">
+            </div>
+        </div>
 
         <div class="row align-items-center mb-5">
-    <div class="col-md-6">
-        <div class="style-section">
-            <h2 class="style-header text-center">Cool Undertone</h2>
-            <table class="table style-table">
-                <tr>
-                    <th>Best Colors</th>
-                    <td>Emerald, Lavender, Royal Blue, Silver, Ruby Red</td>
-                </tr>
-                <tr>
-                    <th>Style Tips</th>
-                    <td>Choose silver jewelry. Stick to jewel tones to brighten your skin.</td>
-                </tr>
-                <tr>
-                    <th>Avoid</th>
-                    <td>Orange, Mustard Yellow and Warm Golds.</td>
-                </tr>
-            </table>
+            <div class="col-md-6 text-center">
+                <img src="warm.jpeg" class="img-fluid rounded shadow" alt="Warm Style">
+            </div>
+            <div class="col-md-6">
+                <div class="style-section" id="section-warm">
+                    <h2 class="text-center" style="color: #8c4848;">Warm Undertone</h2>
+                    <table class="table style-table">
+                        <tr>
+                            <th>Best Colors</th>
+                            <td id="warm-colors"></td>
+                        </tr>
+                        <tr>
+                            <th>Style Tips</th>
+                            <td id="warm-tips"></td>
+                        </tr>
+                        <tr>
+                            <th>Avoid</th>
+                            <td id="warm-avoid"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <div class="style-section" id="section-neutral">
+                    <h2 class="text-center" style="color: #8c4848;">Neutral Undertone</h2>
+                    <table class="table style-table">
+                        <tr>
+                            <th>Best Colors</th>
+                            <td id="neutral-colors"></td>
+                        </tr>
+                        <tr>
+                            <th>Style Tips</th>
+                            <td id="neutral-tips"></td>
+                        </tr>
+                        <tr>
+                            <th>Avoid</th>
+                            <td id="neutral-avoid"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="neutral.jpeg" class="img-fluid rounded shadow" alt="Neutral Style">
+            </div>
         </div>
     </div>
-    <div class="col-md-6 text-center">
-        <img src="cool.jpeg" class="img-fluid rounded shadow" alt="Cool Style">
-    </div>
-</div>
 
-<div class="row align-items-center mb-5">
-    <div class="col-md-6 text-center">
-        <img src="warm.jpeg" class="img-fluid rounded shadow" alt="Warm Style">
-    </div>
-    <div class="col-md-6">
-        <div class="style-section">
-            <h2 class="style-header text-center">Warm Undertone</h2>
-            <table class="table style-table">
-                <tr>
-                    <th>Best Colors</th>
-                    <td>Honey Gold, Olive Green, Peach, Cream, Terracotta</td>
-                </tr>
-                <tr>
-                    <th>Style Tips</th>
-                    <td>Gold jewelry is your best friend. Earthy tones make you glow.</td>
-                </tr>
-                <tr>
-                    <th>Avoid</th>
-                    <td>Icy Blues and Neon Pinks.</td>
-                </tr>
-            </table>
+    <footer class="bg-warning text-center py-3">
+        <div class="container">
+            GlowGuideCommunity@gmail.com
         </div>
-    </div>
-</div>
+    </footer>
 
-<div class="row align-items-center mb-5">
-    <div class="col-md-6">
-        <div class="style-section">
-            <h2 class="style-header text-center">Neutral Undertone</h2>
-            <table class="table style-table">
-                <tr>
-                    <th>Best Colors</th>
-                    <td>Dusty Rose, Jade Green, Navy, Off-White, Soft Grey</td>
-                </tr>
-                <tr>
-                    <th>Style Tips</th>
-                    <td>You can wear both Gold and Silver! Muted tones look best.</td>
-                </tr>
-                <tr>
-                    <th>Avoid</th>
-                    <td>Anything too neon that might overwhelm your balance.</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div class="col-md-6 text-center">
-        <img src="neutral.jpeg" class="img-fluid rounded shadow" alt="Neutral Style">
-    </div>
-</div>
-<div class="footer">
-    <div class="row">
-        <div class="col" style="background-color: rgb(250, 181, 135);"> GlowGuideCommunity@gmail.com</div>
-    </div>
-</div>        
+    <script>
+        function StyleInfo(colors, tips, avoid) {
 
+            this.colors = colors;
+            this.tips = tips;
+            this.avoid = avoid;
+        }
 
-    
+        var coolData = new StyleInfo(
+
+            "Emerald, Lavender, Royal Blue, Silver, Ruby Red", 
+            "Choose silver jewelry. Stick to jewel tones to brighten your skin.", 
+            "Orange, Mustard Yellow and Warm Golds."
+        );
+
+        var warmData = new StyleInfo(
+            "Honey Gold, Olive Green, Peach, Cream, Terracotta", 
+            "Gold jewelry is your best friend. Earthy tones make you glow.", 
+            "Icy Blues and Neon Pinks."
+        );
+
+        var neutralData = new StyleInfo(
+            "Dusty Rose, Jade Green, Navy, Off-White, Soft Grey", 
+            "You can wear both Gold and Silver! Muted tones look best.", 
+            "Anything too neon that might overwhelm your balance."
+        );
+        
+        document.getElementById("cool-colors").innerHTML = coolData.colors;
+        document.getElementById("cool-tips").innerHTML = coolData.tips;
+        document.getElementById("cool-avoid").innerHTML = coolData.avoid;
+
+        document.getElementById("warm-colors").innerHTML = warmData.colors;
+        document.getElementById("warm-tips").innerHTML =  warmData.tips;
+        document.getElementById("warm-avoid").innerHTML = warmData.avoid;
+
+        document.getElementById("neutral-colors").innerHTML = neutralData.colors;
+        document.getElementById("neutral-tips").innerHTML = neutralData.tips;
+        document.getElementById("neutral-avoid").innerHTML = neutralData.avoid;
+
+        function jumpToSection() {
+            var searchVal = document.getElementById("searchInput").value.toLowerCase();
+            
+            if (searchVal.includes("cool")) {
+                window.location.hash = "section-cool";
+            } 
+            else if (searchVal.includes("warm")) {
+                window.location.hash = "section-warm";
+            } 
+            else if (searchVal.includes("neutral")) {
+                window.location.hash = "section-neutral";
+            } 
+            else {
+                alert("Type Cool, Warm, or Neutral....");
+            }
+        }
+    </script>
 </body>
 </html>

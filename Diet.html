@@ -3,193 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Diet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<style>
-        body {
-            background-color: #f5e7e7;
-            font-family: 'Franklin Gothic Medium', sans-serif;
-        }
+<body class="bg-light" style="font-family: sans-serif;">
 
-        
-        .top-bg {
-            background-image: url('diet2.jpg'); 
-            background-size: cover;      
-            background-position: center; 
-            height: 300px; 
-            border: 1px solid rgb(87, 63, 63);
-            border-radius: 15px;
-            display: flex;
-            justify-content: center; 
-            align-items: center;
-            color:#703e3e;
-        }
-        
-        .diet-button {
-            background-color: #ffffff;
-            border: 3px solid #8c4848;
-            padding: 30px 15px;
-            border-radius: 15px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s;
-        }
-        .diet-button:hover{
-            transform: scale(1.05);
-        }
-        .hydration-circle {
-            width: 150px; 
-            height: 150px; 
-            border: 5px solid rgb(121, 79, 79); 
-            border-radius: 50%; 
-            background: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-        }
-    </style>
-<body>
-     <div class="container-fluid"></div>
-      <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+    <nav class="navbar navbar-expand-lg bg-warning navbar-light">
         <div class="container-fluid">
-
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Glow Guide</a>
-
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
-                  <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
-                  <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
-                  <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
-                  <li><a class="dropdown-item" href="Style.html">Style</a></li>
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dietNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="dietNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Glow Guide</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
+                            <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
+                            <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
+                            <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
+                            <li><a class="dropdown-item" href="Style.html">Style</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
                 </ul>
-
-
-              </li>
-            <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
-            <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
-            <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
-          </ul>
-          <a class="ms-auto" href="#">
-              <img src="Logo.jpeg" alt="Logo" style="height: 40px;">
-          </a>
-
+            </div>
+            <a class="navbar-brand" href="#"><img src="Logo.jpeg" alt="Logo" height="40"></a>
         </div>
-      </nav>
-    </div>
-<div class="container my-5">
+    </nav>
 
-      <div class="top-bg" >
-        <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">Fuel your Glow up</h1>
-      </div>
+    <div class="container my-5">
+        <div class="text-center p-5 mb-5 border border-warning rounded-3 bg-white shadow-sm">
+            <h1 class="display-4 fw-bold text-dark">Fuel Your Glow Up</h1>
+            <p class="lead text-muted">Track your nutrition and hydration for a healthier you.</p>
+        </div>
 
-        <div class="row mb-5">
+        <div class="row mb-5 g-4 text-center">
             <div class="col-md-4">
-                <div class="diet-button">
-                    <h3>Calorie Counter</h3>
-                </div>
+                <button class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
+                    <h3 class="h4 mb-0">Calorie Counter</h3>
+                </button>
             </div>
             <div class="col-md-4">
-                <div class="diet-button">
-                    <h3>Healthy and Low Calorie Recipes</h3>
-                </div>
+                <button class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
+                    <h3 class="h4 mb-0">Healthy Recipes</h3>
+                </button>
             </div>
             <div class="col-md-4">
-                <div class="diet-button">
-                    <h3>Tips</h3>
-                </div>
+                <button class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
+                    <h3 class="h4 mb-0">Tips</h3>
+                </button>
             </div>
         </div>
 
         <hr>
 
         <div class="row mt-5 align-items-center">
-            <div class="col-md-6 text-center">
-                <h3 class="mb-4">Calorie Tracker</h3>
-                
-                <p class="mb-1">Calories (900/1800 Kcal)</p>
-                <div class="progress mb-4" style="height: 25px;">
-                 <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #dc9e9e;"></div>
+            <div class="col-md-6">
+                <h3 class="text-center mb-4">Daily Tracker</h3>
+                <label class="form-label">Calories (900/1800 Kcal)</label>
+                <div class="progress mb-3" style="height: 20px;">
+                    <div class="progress-bar bg-warning text-dark" style="width: 50%;">50%</div>
                 </div>
-
-                <p class="mb-1">Protein (50/100g)</p>
-                <div class="progress mb-4" style="height: 25px;">
-                 <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #dc9e9e;"></div>
+                <label class="form-label">Protein (50/100g)</label>
+                <div class="progress mb-3" style="height: 20px;">
+                    <div class="progress-bar bg-warning text-dark" style="width: 50%;">50%</div>
                 </div>
             </div>
 
-            <div class="col-md-6 text-center">
-             <h3>Current Hydration</h3>
-             <div class="hydration-circle">
-                 <h2 class="mb-0">50%</h2>
-                 <h6>1000mL</h6>
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <h3>Current Hydration</h3>
+                <div class="d-flex flex-column justify-content-center align-items-center border border-5 border-warning rounded-circle bg-white shadow" style="width: 140px; height: 140px;">
+                    <h2 class="mb-0 fw-bold text-dark">50%</h2>
+                    <small class="text-muted">1000mL</small>
                 </div>
             </div>
         </div>
+
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-6 p-4 bg-white border border-warning rounded-3 shadow-sm mb-5">
+                <h3 class="text-center mb-4">Your Details</h3>
+                <form onsubmit="checkMyForm(event)">
+                    <div class="mb-3">
+                        <label class="form-label">Age</label>
+                        <input type="number" id="age" class="form-control" placeholder="Enter age">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Height (cm)</label>
+                        <input type="number" id="height" class="form-control" placeholder="Enter height">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Weight (kg)</label>
+                        <input type="number" id="weight" class="form-control" placeholder="Enter weight">
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-warning btn-lg w-100">Submit Details</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="row mt-5">
-    <div class="col-md-6 offset-md-3 border p-4 rounded bg-white shadow-sm mb-5">
-        <h3 class="text-center mb-4">Your Details</h3>
 
-        <form onsubmit="checkMyForm(event)" class="needs-validation" novalidate>
-            <div class="mb-3">
-                <label for="age" class="form-label">Age</label>
-                <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
-                <div class="invalid-feedback">Please provide your age.</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="height" class="form-label">Height (cm)</label>
-                <input type="number" class="form-control" id="height" placeholder="Enter your height" required>
-                <div class="invalid-feedback">Please provide your height.</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="weight" class="form-label">Weight (kg)</label>
-                <input type="number" class="form-control" id="weight" placeholder="Enter your weight" required>
-                <div class="invalid-feedback">Please provide your weight.</div>
-            </div>
-
-            <div class="text-center">
-                <button type="submit" class="btn" style="background-color: #f9b89a; border: 2px solid #8c4848;">
-                    Submit
-                </button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<script>
-  function checkMyForm(event) {
-    var age = document.getElementById("age").value;
-    var height = document.getElementById("height").value;
-    var weight = document.getElementById("weight").value;
-
-    if (age == "" || height == ""  || weight == "") {
-      event.preventDefault();
-      alert("Please fill in all the details!");
-    } else {
-      alert("Form submitted successfully!");
-    }
-  }
-</script>
-
- <br>   
-  <footer class="bg-warning text-center py-3">
-      <div class="container">
-          GlowGuideCommunity@gmail.com
-      </div>
+    <footer class="bg-warning text-center py-3 border-top">
+        <div class="container fw-bold">
+            GlowGuideCommunity@gmail.com
+        </div>
     </footer>
+
+    <script>
+        function checkMyForm(event) {
+            var age = document.getElementById("age").value;
+            var height = document.getElementById("height").value;
+            var weight = document.getElementById("weight").value;
+
+            if (age == "" || height == "" || weight == "") {
+                event.preventDefault();
+                alert("Please fill in all the details!");
+            } else {
+                alert("Form submitted successfully!");
+            }
+        }
+    </script>
+
 </body>
 </html>

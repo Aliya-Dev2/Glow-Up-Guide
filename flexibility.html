@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexibility Workouts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container text-center my-5">
+
+    <a href="Fitness.html" class="btn btn-secondary mb-4">Back</a>
+
+    <h2>Flexibility Workouts</h2>
+
+    <div class="row" id="box"></div>
+
+</div>
+
+<script>
+    let workouts = [
+        {
+            name: "Hamstring Stretch",
+            image: "hamstringstretch.jpg",
+            info: "Sit on the floor with your legs straight in front of you. Slowly reach forward toward your toes while keeping your back straight. Hold the stretch for 15–30 seconds. This helps improve lower body flexibility and reduces tightness in your legs."
+        },
+        {
+            name: "Shoulder Stretch",
+            image: "shoulderstretch.png",
+            info: "Bring one arm across your chest and use the other arm to gently pull it closer. Keep your shoulders relaxed and avoid lifting them. Hold for 15–30 seconds, then switch arms. This helps release tension in your shoulders and upper back."
+        },
+        {
+            name: "Quad Stretch",
+            image: "quad.jpg",
+            info: "Stand upright and bend one leg behind you, grabbing your ankle. Pull gently toward your body while keeping your knees close together. Hold for 15–30 seconds, then switch legs. This improves thigh flexibility and balance."
+        },
+        {
+            name: "Child’s Pose",
+            image: "childspose.jpg",
+            info: "Start on your knees, then sit back on your heels and stretch your arms forward on the ground. Lower your chest toward the floor and relax your body. Breathe slowly and hold for 20–40 seconds. This stretch relaxes the back, hips, and shoulders."
+        }
+    ];
+
+    let box = document.getElementById("box");
+
+    for (let i = 0; i < workouts.length; i++) {
+        box.innerHTML += `
+            <div class="col-md-3 mb-4">
+                <div class="card p-2">
+                    <img src="${workouts[i].image}" width="100%" height="150">
+                    <h5>${workouts[i].name}</h5>
+                    <p>${workouts[i].info}</p>
+                </div>
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>

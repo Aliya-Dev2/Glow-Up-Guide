@@ -52,17 +52,18 @@
     <div class="row justify-content-center">
     <div class="col-md-7">
 
-        <form id="glowForm" class="p-4 border rounded bg-white" onsubmit="return validateForm()">
+        <form id="glowForm" action="questionnaire.php" method="POST" class="p-4 border rounded bg-white" onsubmit="return validateForm()">
+
 
             <div class="mb-3">
                 <label class="form-label">Full Name</label>
-                <input type="text" id="name" class="form-control">
+                <input type="text" name= "name" id="name" class="form-control">
                 <div class="text-danger" id="nameError"></div>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Email Address</label>
-                <input type="text" id="email" class="form-control">
+                <input type="text" name="email" id="email" class="form-control">
                 <div class="text-danger" id="emailError"></div>
             </div>
 
@@ -78,10 +79,10 @@
             <div class="mb-3">
                 <label class="form-label">What do you want to improve? (Select all that apply)</label><br>
 
-                <input type="checkbox" value="diet"> Diet<br>
-                <input type="checkbox" value="sleep"> Sleep routine<br>
-                <input type="checkbox" value="confidence"> Confidence<br>
-                <input type="checkbox" value="fitness"> Fitness<br>
+                <input type="checkbox" name="improve[]" value="diet"> Diet<br>
+                <input type="checkbox" name="improve[]" value="sleep"> Sleep routine<br>
+                <input type="checkbox" name="improve[]" value="confidence"> Confidence<br>
+                <input type="checkbox" name="improve[]" value="fitness"> Fitness<br>
             </div>
 
             <div class="mb-3">
@@ -94,7 +95,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Tell us about your glow-up journey</label>
-                <textarea id="feedback" class="form-control" rows="4"></textarea>
+                <textarea id="feedback" name="feedback" class="form-control" rows="4"></textarea>
                 <div class="text-danger" id="feedbackError"></div>
             </div>
 
@@ -166,6 +167,19 @@
             } else { //else the form wont be submitted
                 return false; 
             }
+
+            let goal = document.querySelector('input[name="goal"]:checked');
+            if (!goal) {
+               alert("Please select a goal");
+               return false;
+            }
+
+            let habit = document.querySelector('input[name="habit"]:checked');
+            if (!habit) {
+               alert("Please select your consistency level");
+               return false;
+            }
+
         }  
     </script>
 

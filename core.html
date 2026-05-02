@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Core Workouts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container text-center my-5">
+
+    <a href="Fitness.html" class="btn btn-secondary mb-4">Back</a>
+
+    <h2>Core Workouts</h2>
+
+    <div class="row" id="box"></div>
+
+</div>
+
+<script>
+    let workouts = [
+        {
+            name: "Plank",
+            image: "plank.jpg",
+            info: "Get into a push-up position but rest on your forearms. Keep your body straight from head to toe. Hold your stomach tight and avoid letting your hips drop. Hold for 20–60 seconds. This strengthens your entire core."
+        },
+        {
+            name: "Crunches",
+            image: "crunches.jpg",
+            info: "Lie on your back with knees bent and hands behind your head. Lift your upper body slightly using your abs, then slowly lower back down. Repeat 10–15 times. This targets your upper abdominal muscles."
+        },
+        {
+            name: "Leg Raises",
+            image: "legraises.jpg",
+            info: "Lie flat on your back with your legs straight. Slowly lift your legs up to a 90-degree angle, then lower them without touching the floor. Repeat 10–12 times. This strengthens lower abs."
+        },
+        {
+            name: "Russian Twists",
+            image: "russiantwist.jpg",
+            info: "Sit on the floor, lean back slightly, and lift your feet off the ground. Twist your body left and right while holding your hands together. Repeat 10–20 twists each side. This improves core rotation and balance."
+        }
+    ];
+
+    let box = document.getElementById("box");
+
+    for (let i = 0; i < workouts.length; i++) {
+        box.innerHTML += `
+            <div class="col-md-3 mb-4">
+                <div class="card p-2">
+                    <img src="${workouts[i].image}" width="100%" height="150">
+                    <h5>${workouts[i].name}</h5>
+                    <p>${workouts[i].info}</p>
+                </div>
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>

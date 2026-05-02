@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cardio Workouts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container text-center my-5">
+
+    <a href="Fitness.html" class="btn btn-secondary mb-4">Back</a>
+
+    <h2>Cardio Workouts</h2>
+
+    <div class="row" id="box"></div>
+
+</div>
+
+<script>
+    let workouts = [
+        {
+            name: "Jumping Jacks",
+            image: "jumpingjacks.jpg",
+            info: "Stand upright with your feet together and arms at your sides. Jump while spreading your legs and raising your arms overhead, then return to starting position. Repeat continuously for 30–60 seconds. This increases heart rate and burns calories."
+        },
+        {
+            name: "High Knees",
+            image: "highknees.jpg",
+            info: "Stand in place and run while lifting your knees as high as possible. Move your arms like you're sprinting. Keep a steady fast pace for 30–60 seconds. This improves stamina and leg strength."
+        },
+        {
+            name: "Burpees",
+            image: "burpees.jpg",
+            info: "Start standing, drop into a squat, place your hands on the ground, jump your feet back into a plank, do a push-up (optional), then jump back up. Repeat 8–12 times. This is a full-body cardio workout."
+        },
+        {
+            name: "Mountain Climbers",
+            image: "mountainClimbers.jpg",
+            info: "Start in a plank position. Quickly bring one knee toward your chest, then switch legs like you're running in place. Keep your core tight. Do this for 30–60 seconds. This boosts cardio and core strength."
+        }
+    ];
+
+    let box = document.getElementById("box");
+
+    for (let i = 0; i < workouts.length; i++) {
+        box.innerHTML += `
+            <div class="col-md-3 mb-4">
+                <div class="card p-2">
+                    <img src="${workouts[i].image}" width="100%" height="150">
+                    <h5>${workouts[i].name}</h5>
+                    <p>${workouts[i].info}</p>
+                </div>
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>

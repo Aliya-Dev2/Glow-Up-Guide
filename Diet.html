@@ -1,138 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diet</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diet</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+.error-text { color: #dc3545; font-size: 0.875em; display:none; }
+</style>
 </head>
+
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-sm bg-warning navbar-light">
-        <div class="container-fluid">
+<nav class="navbar navbar-expand-sm bg-warning navbar-light">
+<div class="container-fluid">
 
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Glow Guide</a>
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
 
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
-                  <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
-                  <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
-                  <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
-                  <li><a class="dropdown-item" href="Style.html">Style</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Glow Guide</a>
 
-                </ul>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
+<li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
+<li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
+<li><a class="dropdown-item" href="Diet.html">Diet</a></li>
+<li><a class="dropdown-item" href="Style.html">Style</a></li>
+</ul>
+</li>
+
+<li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
+<li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+<li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+<li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+</ul>
+
+<a class="ms-auto" href="#">
+<img src="Logo.jpeg" alt="Logo" style="height: 40px;">
+</a>
+
+</div>
+</nav>
+
+<div class="container my-5">
+
+<div class="text-center p-5 mb-5 border border-warning rounded-3 bg-white shadow-sm">
+<h1 class="display-4 fw-bold text-dark">Fuel Your Glow Up</h1>
+<p class="lead text-muted">Track your nutrition and hydration for a healthier you.</p>
+</div>
 
 
-              </li>
-            <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
-            <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
-            <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
-          </ul>
-          <a class="ms-auto" href="#">
-              <img src="Logo.jpeg" alt="Logo" style="height: 40px;">
-          </a>
+<div class="row mb-5 g-4 text-center">
 
-        </div>
-      </nav>
+<div class="col-md-4">
+<button onclick="location.href='calorieCounter.html'" class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
+<h3 class="h4 mb-0">Calorie Counter</h3>
+</button>
+</div>
 
-    <div class="container my-5">
-        <div class="text-center p-5 mb-5 border border-warning rounded-3 bg-white shadow-sm">
-            <h1 class="display-4 fw-bold text-dark">Fuel Your Glow Up</h1>
-            <p class="lead text-muted">Track your nutrition and hydration for a healthier you.</p>
-        </div>
+<div class="col-md-4">
+<button onclick="location.href='recipes.html'" class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
+<h3 class="h4 mb-0">Healthy Recipes</h3>
+</button>
+</div>
 
-        <div class="row mb-5 g-4 text-center">
-            <div class="col-md-4">
-                <button class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
-                    <h3 class="h4 mb-0">Calorie Counter</h3>
-                </button>
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
-                    <h3 class="h4 mb-0">Healthy Recipes</h3>
-                </button>
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
-                    <h3 class="h4 mb-0">Tips</h3>
-                </button>
-            </div>
-        </div>
+<div class="col-md-4">
+<button onclick="showTip()" class="btn btn-warning w-100 py-5 shadow-sm border border-dark rounded-3">
+<h3 class="h4 mb-0">Tips</h3>
+</button>
+</div>
 
-        <hr>
+</div>
 
-        <div class="row mt-5 align-items-center">
-            <div class="col-md-6">
-                <h3 class="text-center mb-4">Daily Tracker</h3>
-                <label class="form-label">Calories (900/1800 Kcal)</label>
-                <div class="progress mb-3" style="height: 20px;">
-                    <div class="progress-bar bg-warning text-dark" style="width: 50%;">50%</div>
-                </div>
-                <label class="form-label">Protein (50/100g)</label>
-                <div class="progress mb-3" style="height: 20px;">
-                    <div class="progress-bar bg-warning text-dark" style="width: 50%;">50%</div>
-                </div>
-            </div>
+<hr>
 
-            <div class="col-md-6 d-flex flex-column align-items-center">
-                <h3>Current Hydration</h3>
-                <div class="d-flex flex-column justify-content-center align-items-center border border-5 border-warning rounded-circle bg-white shadow" style="width: 140px; height: 140px;">
-                    <h2 class="mb-0 fw-bold text-dark">50%</h2>
-                    <small class="text-muted">1000mL</small>
-                </div>
-            </div>
-        </div>
+<div class="row mt-5 align-items-center">
 
-        <div class="row mt-5 justify-content-center">
-            <div class="col-md-6 p-4 bg-white border border-warning rounded-3 shadow-sm mb-5">
-                <h3 class="text-center mb-4">Your Details</h3>
-                <form onsubmit="checkMyForm(event)">
-                    <div class="mb-3">
-                        <label class="form-label">Age</label>
-                        <input type="number" id="age" class="form-control" placeholder="Enter age">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Height (cm)</label>
-                        <input type="number" id="height" class="form-control" placeholder="Enter height">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Weight (kg)</label>
-                        <input type="number" id="weight" class="form-control" placeholder="Enter weight">
-                    </div>
-                    <div class="text-center mt-4">
-                        <button type="submit" class="btn btn-warning btn-lg w-100">Submit Details</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+<div class="col-md-6">
+<h3 class="text-center mb-4">Daily Tracker</h3>
 
-    <footer class="bg-warning text-center py-3 border-top">
-        <div class="container fw-bold">
-            GlowGuideCommunity@gmail.com
-        </div>
-    </footer>
+<label class="form-label" id="calLabel">Calories (0/2000 Kcal)</label>
+<div class="progress mb-3" style="height:20px;">
+<div id="calBar" class="progress-bar bg-warning text-dark" style="width:0%">0%</div>
+</div>
 
-    <script>
-        function checkMyForm(event) {
-            var age = document.getElementById("age").value;
-            var height = document.getElementById("height").value;
-            var weight = document.getElementById("weight").value;
+<label class="form-label" id="proLabel">Protein (0/100g)</label>
+<div class="progress mb-3" style="height:20px;">
+<div id="proBar" class="progress-bar bg-warning text-dark" style="width:0%">0%</div>
+</div>
+</div>
 
-            if (age == "" || height == "" || weight == "") {
-                event.preventDefault();
-                alert("Please fill in all the details!");
-            } else {
-                alert("Form submitted successfully!");
-            }
-        }
-    </script>
+
+<div class="col-md-6">
+<h3 class="text-center mb-4">Current Hydration</h3>
+
+<div class="p-4 bg-white border border-warning rounded-3 shadow-sm">
+
+<label class="form-label fw-bold d-flex justify-content-between">
+Daily Goal (3L)
+<span id="hydroMl" class="text-muted small">0mL</span>
+</label>
+
+<div class="progress mb-4" style="height:30px; border-radius:15px;">
+<div id="water-bar" class="progress-bar bg-info text-dark fw-bold" style="width:0%">0%</div>
+</div>
+
+<div class="d-flex gap-2">
+<button class="btn btn-info text-white flex-fill rounded-pill fw-bold" onclick="addWater()">+ Add Glass</button>
+<button class="btn btn-outline-secondary rounded-pill px-4" onclick="resetWater()">Reset</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="row mt-5 justify-content-center">
+<div class="col-md-6 p-4 bg-white border border-warning rounded-3 shadow-sm mb-5">
+
+<h3 class="text-center mb-4">Your Details</h3>
+
+<form onsubmit="return checkMyForm(event)"   action="process_diet.php" method="POST">
+
+<div class="mb-3">
+<label class="form-label">Age</label>
+<input type="number" id="age" name="age" class="form-control" placeholder="Enter age">
+<div id="ageError" class="error-text">Please enter a valid age (10-100).</div>
+</div>
+
+  <div class="mb-3">
+<label class="form-label">Height (cm)</label>
+<input type="number" id="height" name="height" class="form-control" placeholder="Enter height">
+<div id="heightError" class="error-text">Please enter a valid height (50-250).</div>
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Weight (kg)</label>
+<input type="number" id="weight" name="weight" class="form-control" placeholder="Enter weight">
+<div id="weightError" class="error-text">Please enter a valid weight (30-300).</div>
+</div>
+
+<div class="text-center mt-4">
+<button type="submit" class="btn btn-warning btn-lg w-100">Submit Details</button>
+</div>
+
+</form>
+
+<a href="fitness_database.php" class="btn btn-outline-warning w-100 mt-3">Open Fitness DB</a>
+
+</div>
+</div>
+
+</div>
+
+
+<footer class="bg-warning text-center py-3 border-top">
+<div class="container fw-bold">GlowGuideCommunity@gmail.com</div>
+</footer>
+
+
+<script>
+
+function checkMyForm(event) {
+document.querySelectorAll('.error-text').forEach(el => el.style.display = 'none');
+
+var age = document.getElementById("age").value;
+var height = document.getElementById("height").value;
+var weight = document.getElementById("weight").value;
+
+var valid = true;
+
+if (age == "" || age < 10 || age > 100) {
+document.getElementById("ageError").style.display = 'block';
+valid = false;
+}
+
+if (height == "" || height < 50 || height > 250) {
+document.getElementById("heightError").style.display = 'block';
+valid = false;
+}
+
+if (weight == "" || weight < 30 || weight > 300) {
+document.getElementById("weightError").style.display = 'block';
+valid = false;
+}
+
+if (!valid) {
+event.preventDefault();
+return false;
+}
+
+return true;
+}
+
+function showTip() {
+let tips = ["Drink water before meals","Eat more protein","Sleep well","Avoid junk food"];
+alert(tips[Math.floor(Math.random()*tips.length)]);
+}
+
+function addWater() {
+let w = parseFloat(localStorage.getItem('water') || 0);
+w += 0.5;
+localStorage.setItem('water', w);
+updateWater();
+}
+
+function resetWater() {
+localStorage.setItem('water', 0);
+updateWater();
+}
+
+function updateWater() {
+let water = parseFloat(localStorage.getItem('water') || 0);
+let percent = (water / 3) * 100;
+
+document.getElementById("water-bar").style.width = percent + "%";
+document.getElementById("water-bar").innerText = Math.round(percent) + "%";
+document.getElementById("hydroMl").innerText = (water*1000) + "mL";
+}
+
+window.onload = updateWater;
+
+</script>
 
 </body>
 </html>

@@ -66,7 +66,7 @@
 
             <h4 class="text-center mb-3">Send Us an Email</h4>
 
-            <form action="https://formsubmit.co/GlowGuideCommunity@gmail.com" method="POST" class="was-validated">
+            <form action="contact.php" method="POST" onsubmit="return validateForm()" class="was-validated">
 
                 <div class="mb-3">
                     <label class="form-label">Name</label>
@@ -137,6 +137,36 @@
       </div>
     </footer>
 </div>
+
+<script>
+   function validateForm() {
+
+        let name = document.forms[0]["name"].value;
+        let email = document.forms[0]["email"].value;
+        let message = document.forms[0]["message"].value;
+
+        
+        if (name == "" || email == "" || message == "") {
+            alert("All fields are required!");
+            return false;
+        }
+
+        
+        let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+            alert("Invalid email format!");
+            return false;
+        }
+
+        
+        if (message.length < 10) {
+            alert("Message must be at least 10 characters.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
     
 </body>
 </html>

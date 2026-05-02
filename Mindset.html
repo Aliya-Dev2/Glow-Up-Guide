@@ -124,9 +124,9 @@
       
       <div class="p-3 rounded shadow" >
         <h6  id="text">How Do You Feel Today ?</h6>
-        <button type="button" class="btn bg-light button" >🙂</button>
-        <button type="button" class="btn bg-light button" >😐</button>
-        <button type="button" class="btn bg-light button" >☹</button>
+        <button type="button" class="mode btn " id="happy"  onclick="changeCol(this, 'green')" >🙂</button>
+        <button type="button" class="mode btn " id="mid"  onclick="changeCol(this, 'yellow')" >😐</button>
+        <button type="button" class="mode btn " id="sad"  onclick="changeCol(this, 'red')" >☹</button>
       </div>
 
     </div>
@@ -180,7 +180,7 @@
     </footer>
 
 <script>
-  // TIMER 
+  
   
   // set counter 
 var done = 0;
@@ -197,8 +197,16 @@ buttons.forEach(function(button) {
   // activate the functions whenever the button event clicked
   button.addEventListener("click",function() {
     
+
+    if(this.classList.contains("completed")){
+        done--;
+
+        this.classList.remove("completed");
+        
+        this.innerText = "Done";
+    }
     // if the button array doesnt include the element "completed", add it and increment the counter
-    if (!this.classList.contains("completed")) {
+    else {
       done++;
 
       this.classList.add("completed");
@@ -284,6 +292,32 @@ function stop(){
 }
 
 
+</script>
+
+
+
+<script>
+let selected = null;
+
+function changeCol(btn, color) {
+
+    
+    if (selected === btn) {
+        btn.style.backgroundColor = "beige";
+        selected = null;
+        
+    }
+
+    
+    let buttons = document.getElementsByClassName("mode");
+    for (let i = 0; i < buttons.length; i++) {
+    buttons[i].style.backgroundColor = "beige";
+}
+
+    
+    btn.style.backgroundColor = color;
+    selected = btn;
+}
 </script>
 </body>
 </html>

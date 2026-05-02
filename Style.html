@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,213 +7,193 @@
     <title>Glow Up Guide - Style</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .style-error { color: #dc3545; font-size: 0.85em; display: none; margin-top: 5px; }
+    </style>
 </head>
-<body class="bg-light"> <nav class="navbar navbar-expand-sm bg-warning navbar-light shadow-sm">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Glow Guide</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
-                        <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
-                        <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
-                        <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
-                        <li><a class="dropdown-item" href="Style.html">Style</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
-                <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
-                <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
-            </ul>
-            <a class="ms-auto" href="#">
-                <img src="Logo.jpeg" alt="Logo" class="img-fluid" style="height: 40px;">
-            </a>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-sm bg-warning navbar-light shadow-sm">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="AboutUs.html">About us</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Glow Guide</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Mindset.html">Mindset</a></li>
+                    <li><a class="dropdown-item" href="SkinCare.html">SkinCare</a></li>
+                    <li><a class="dropdown-item" href="Fitness.html">Fitness</a></li>
+                    <li><a class="dropdown-item" href="Diet.html">Diet</a></li>
+                    <li><a class="dropdown-item" href="Style.html">Style</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+            <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+            <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+        </ul>
+        <a class="ms-auto" href="#">
+            <img src="Logo.jpeg" alt="Logo" class="img-fluid" style="height: 40px;">
+        </a>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 text-dark fw-bold">Style</h1>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <p class="lead">
+                Your personal style is a reflection of who you are, so choosing colors, outfits and accessories that match your personality can boost confidence and make a lasting impression.
+            </p>
         </div>
-
-
-    </nav>
-
-
-    <div class="container my-5">
-        <div class="text-center mb-5">
-            <h1 class="display-4 text-dark fw-bold">Style</h1>
+        <div class="col-md-6">
+            <img src="style1.avif" class="img-fluid rounded shadow" alt="Main Style">
         </div>
+    </div>
 
-        <div class="row align-items-center mb-5">
-
-            <div class="col-md-6">
-                <p class="lead">
-                    Your personal style is a reflection of who you are, so choosing colors, outfits and accessories that match your personality can boost confidence and make a lasting impression.
-                </p>
-            </div>
-            <div class="col-md-6">
-                <img src="style1.avif" class="img-fluid rounded shadow" alt="Main Style">
-            </div>
-        </div>
-
-        <div class="row mb-5 justify-content-center">
-            <div class="col-md-6">
-                <div class="input-group shadow-sm">
-
-                    <input type="text" id="searchInput" class="form-control border-warning" placeholder="Type Cool, Warm, or Neutral...">
-                    <button class="btn btn-outline-warning rounded-end-pill px-4" type="button" onclick="jumpToSection()">Search</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center mb-5">
-            <div class="col-md-6">
-                <img src="undertones.jpg" class="img-fluid rounded shadow" alt="Undertones">
-            </div>
-            <div class="col-md-6 text-center">
-
-                <p class="lead text-muted">
-                    Finding your undertone helps you choose clothing, makeup and accessories that naturally complement your overall look and glow.
-                </p>
-                <button class="btn btn-warning rounded-pill px-5 py-2 shadow-sm fw-bold">Find my undertone</button>
-            </div>
-        </div>
-
-        <hr class="my-5">
-
-        <div class="row align-items-center mb-5" id="section-cool">
-            <div class="col-md-6">
-
-                <div class="p-3 bg-white rounded shadow-sm border-top border-primary border-4">
-                    <h2 class="text-center text-primary mb-4">Cool Undertone</h2>
-                    <table class="table table-borderless">
-                        <tr>
-                            <th class="text-primary w-25">Best Colors</th>
-                            <td id="cool-colors" class="text-muted"></td>
-                        </tr>
-                        <tr>
-                            <th class="text-primary w-25">Style Tips</th>
-                            <td id="cool-tips" class="text-muted"></td>
-                        </tr>
-                        <tr>
-                            <th class="text-primary w-25 border-bottom-0">Avoid</th>
-                            <td id="cool-avoid" class="text-muted border-bottom-0"></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="cool.jpeg" class="img-fluid rounded shadow" alt="Cool Style">
-            </div>
-        </div>
-
-        <div class="row align-items-center mb-5" id="section-warm">
-            <div class="col-md-6 text-center order-last order-md-first">
-                <img src="warm.jpeg" class="img-fluid rounded shadow" alt="Warm Style">
-            </div>
-            <div class="col-md-6">
-                <div class="p-3 bg-white rounded shadow-sm border-top border-warning border-4">
-                    <h2 class="text-center text-warning mb-4">Warm Undertone</h2>
-                    <table class="table table-borderless">
-                        <tr>
-                            <th class="text-warning w-25">Best Colors</th>
-                            <td id="warm-colors" class="text-muted"></td>
-                        </tr>
-                        <tr>
-                            <th class="text-warning w-25">Style Tips</th>
-                            <td id="warm-tips" class="text-muted"></td>
-                        </tr>
-                        <tr>
-                            <th class="text-warning w-25 border-bottom-0">Avoid</th>
-                            <td id="warm-avoid" class="text-muted border-bottom-0"></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row align-items-center mb-5" id="section-neutral">
-            <div class="col-md-6">
-                <div class="p-3 bg-white rounded shadow-sm border-top border-success border-4">
-                    <h2 class="text-center text-success mb-4">Neutral Undertone</h2>
-                    <table class="table table-borderless">
-                        <tr>
-                            <th class="text-success w-25">Best Colors</th>
-                            <td id="neutral-colors" class="text-muted"></td>
-                        </tr>
-                        <tr>
-                            <th class="text-success w-25">Style Tips</th>
-                            <td id="neutral-tips" class="text-muted"></td>
-                        </tr>
-                        <tr>
-                            <th class="text-success w-25 border-bottom-0">Avoid</th>
-                            <td id="neutral-avoid" class="text-muted border-bottom-0"></td>
-                            
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="neutral.jpeg" class="img-fluid rounded shadow" alt="Neutral Style">
+    <div class="row mb-5 justify-content-center">
+        <div class="col-md-6">
+            <div class="input-group shadow-sm">
+                <input type="text" id="searchInput" class="form-control border-warning" placeholder="Type Cool, Warm, or Neutral...">
+                <button class="btn btn-outline-warning rounded-end-pill px-4" type="button" onclick="jumpToSection()">Search</button>
             </div>
         </div>
     </div>
 
-    <footer class="bg-warning text-center py-4 mt-5">
-        <div class="container fw-bold">
-            GlowGuideCommunity@gmail.com
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="undertones.jpg" class="img-fluid rounded shadow" alt="Undertones">
         </div>
-    </footer>
+        <div class="col-md-6 text-center">
+            <p class="lead text-muted">
+                Finding your undertone helps you choose clothing, makeup and accessories that naturally complement your overall look and glow.
+            </p>
+            <button class="btn btn-warning rounded-pill px-5 py-2 shadow-sm fw-bold" onclick="showQuiz()">Find my undertone</button>
+        </div>
+        <a href="style_objects.php" class="btn btn-outline-warning rounded-pill px-5 py-2 shadow-sm fw-bold mt-3">
+      View Style PHP
+      </a>
+    </div>
 
-    <script>
-        function StyleInfo(colors, tips, avoid) {
-            this.colors = colors;
-            this.tips = tips;
-            this.avoid = avoid;
-        }
+    
+    <div class="container my-5 text-center" id="quizSection" style="display: none;">
+        <h2 class="fw-bold mb-4">Discover Your Undertone</h2>
+        <div id="quiz-container" class="card p-4 shadow-sm border-warning">
+            <p id="question" class="lead">Look at your wrist veins. What color are they?</p>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-outline-primary" onclick="score('cool')">Blue or Purple</button>
+                <button class="btn btn-outline-success" onclick="score('warm')">Green or Olive</button>
+                <button class="btn btn-outline-secondary" onclick="score('neutral')">Hard to tell / Both</button>
+            </div>
+        </div>
+    </div>
 
-        var coolData = new StyleInfo(
-            "Emerald, Lavender, Royal Blue, Silver, Ruby Red", 
-            "Choose silver jewelry. Stick to jewel tones to brighten your skin.", 
-            "Orange, Mustard Yellow and Warm Golds."
-        );
+    <hr class="my-5">
 
-        var warmData = new StyleInfo(
+   
+    <div class="row align-items-center mb-5" id="section-cool">
+        <div class="col-md-6">
+            <div class="p-3 bg-white rounded shadow-sm border-top border-primary border-4">
+                <h2 class="text-center text-primary mb-4">Cool Undertone</h2>
+                <table class="table table-borderless">
+                    <tr><th class="text-primary w-25">Best Colors</th><td id="cool-colors" class="text-muted"></td></tr>
+                    <tr><th class="text-primary w-25">Style Tips</th><td id="cool-tips" class="text-muted"></td></tr>
+                    <tr><th class="text-primary w-25 border-bottom-0">Avoid</th><td id="cool-avoid" class="text-muted border-bottom-0"></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="cool.jpeg" class="img-fluid rounded shadow" alt="Cool Style">
+        </div>
+    </div>
 
-            "Honey Gold, Olive Green, Peach, Cream, Terracotta", 
-            "Gold jewelry is your best friend. Earthy tones make you glow.", 
-            "Icy Blues and Neon Pinks."
-        );
+    
+    <div class="row align-items-center mb-5" id="section-warm">
+        <div class="col-md-6 text-center order-last order-md-first">
+            <img src="warm.jpeg" class="img-fluid rounded shadow" alt="Warm Style">
+        </div>
+        <div class="col-md-6">
+            <div class="p-3 bg-white rounded shadow-sm border-top border-warning border-4">
+                <h2 class="text-center text-warning mb-4">Warm Undertone</h2>
+                <table class="table table-borderless">
+                    <tr><th class="text-warning w-25">Best Colors</th><td id="warm-colors" class="text-muted"></td></tr>
+                    <tr><th class="text-warning w-25">Style Tips</th><td id="warm-tips" class="text-muted"></td></tr>
+                    <tr><th class="text-warning w-25 border-bottom-0">Avoid</th><td id="warm-avoid" class="text-muted border-bottom-0"></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        var neutralData = new StyleInfo(
-            "Dusty Rose, Jade Green, Navy, Off-White, Soft Grey", 
-            "You can wear both Gold and Silver! Muted tones look best.", 
-            "Anything too neon that might overwhelm your balance."
-        );
-        
-        document.getElementById("cool-colors").innerHTML = coolData.colors;
-        document.getElementById("cool-tips").innerHTML = coolData.tips;
-        document.getElementById("cool-avoid").innerHTML = coolData.avoid;
+   
+    <div class="row align-items-center mb-5" id="section-neutral">
+        <div class="col-md-6">
+            <div class="p-3 bg-white rounded shadow-sm border-top border-success border-4">
+                <h2 class="text-center text-success mb-4">Neutral Undertone</h2>
+                <table class="table table-borderless">
+                    <tr><th class="text-success w-25">Best Colors</th><td id="neutral-colors" class="text-muted"></td></tr>
+                    <tr><th class="text-success w-25">Style Tips</th><td id="neutral-tips" class="text-muted"></td></tr>
+                    <tr><th class="text-success w-25 border-bottom-0">Avoid</th><td id="neutral-avoid" class="text-muted border-bottom-0"></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="neutral.jpeg" class="img-fluid rounded shadow" alt="Neutral Style">
+        </div>
+    </div>
+</div>
 
-        document.getElementById("warm-colors").innerHTML = warmData.colors;
-        document.getElementById("warm-tips").innerHTML =  warmData.tips;
-        document.getElementById("warm-avoid").innerHTML = warmData.avoid;
 
-        document.getElementById("neutral-colors").innerHTML = neutralData.colors;
-        document.getElementById("neutral-tips").innerHTML = neutralData.tips;
-        document.getElementById("neutral-avoid").innerHTML = neutralData.avoid;
+<footer class="bg-warning text-center py-4 mt-5">
+    <div class="container fw-bold">
+        GlowGuideCommunity@gmail.com
+    </div>
+</footer>
 
-        function jumpToSection() {
-            var searchVal = document.getElementById("searchInput").value.toLowerCase();
-            if (searchVal.includes("cool")) {
-                window.location.hash = "section-cool";
-            } else if (searchVal.includes("warm")) {
-                window.location.hash = "section-warm";
-            } else if (searchVal.includes("neutral")) {
-                window.location.hash = "section-neutral";
-            } else {
-                alert("Type Cool, Warm, or Neutral...");
-            }
-        }
-    </script>
+<script>
+function StyleInfo(colors, tips, avoid) {
+    this.colors = colors;
+    this.tips = tips;
+    this.avoid = avoid;
+}
+
+var coolData = new StyleInfo("Emerald, Lavender, Royal Blue, Silver, Ruby Red", "Choose silver jewelry. Stick to jewel tones to brighten your skin.", "Orange, Mustard Yellow and Warm Golds.");
+var warmData = new StyleInfo("Honey Gold, Olive Green, Peach, Cream, Terracotta", "Gold jewelry is your best friend. Earthy tones make you glow.", "Icy Blues and Neon Pinks.");
+var neutralData = new StyleInfo("Dusty Rose, Jade Green, Navy, Off-White, Soft Grey", "You can wear both Gold and Silver! Muted tones look best.", "Anything too neon that might overwhelm your balance.");
+
+document.getElementById("cool-colors").innerHTML = coolData.colors;
+document.getElementById("cool-tips").innerHTML = coolData.tips;
+document.getElementById("cool-avoid").innerHTML = coolData.avoid;
+document.getElementById("warm-colors").innerHTML = warmData.colors;
+document.getElementById("warm-tips").innerHTML = warmData.tips;
+document.getElementById("warm-avoid").innerHTML = warmData.avoid;
+document.getElementById("neutral-colors").innerHTML = neutralData.colors;
+document.getElementById("neutral-tips").innerHTML = neutralData.tips;
+document.getElementById("neutral-avoid").innerHTML = neutralData.avoid;
+
+function jumpToSection() {
+    var searchVal = document.getElementById("searchInput").value.toLowerCase();
+    if (searchVal.includes("cool")) { window.location.hash = "section-cool"; } 
+    else if (searchVal.includes("warm")) { window.location.hash = "section-warm"; } 
+    else if (searchVal.includes("neutral")) { window.location.hash = "section-neutral"; } 
+    else { alert("Type Cool, Warm, or Neutral..."); }
+}
+
+
+function showQuiz() {
+    document.getElementById("quizSection").style.display = "block";
+    window.location.hash = "quizSection";
+}
+
+
+function score(type) {
+    alert("Your undertone is likely " + type.toUpperCase() + "!");
+    window.location.hash = "section-" + type;
+}
+</script>
+
 </body>
 </html>

@@ -11,6 +11,26 @@
 </head>
 
 
+
+<style>
+
+
+.showQuote{
+    animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide{
+    from{
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+</style>
+
 <body class="bg">
   <div class="container-fluid"></div>
       <nav class="navbar navbar-expand-sm bg-warning navbar-light">
@@ -51,13 +71,17 @@
   
   <div class="p-4 bgContainer text-center rounded shadow ">
     
-    <b>Rough day?
-        Doubting yourself ?
-    Click to see what great minds had to say </b><br>
+    <b>A Great Mind Once Said :</b><br>
     <br>
     
-    <button type="button" class="btn btn-outline-warning" >Todays Quote</button>
+    <button type="button" class="btn btn-outline-warning" onclick="animation()" >Todays Quote</button>
 
+
+    <div id="box" class="mt-4 d-none">
+  <div class="card shadow-lg p-4 Card1">
+      <h5 id="text"></h5>
+  </div>
+</div>
   </div>
 
 
@@ -318,6 +342,45 @@ function changeCol(btn, color) {
     btn.style.backgroundColor = color;
     selected = btn;
 }
+</script>
+
+
+<script>
+
+var quotes = [
+"Nothing in life to be feared, only to be uderstood. (Marie curie)",
+"We cannot solve problems with the same thinking we used to create them. (Albert Einistien)",
+"Enjoy the little things, for one day you may look back and realize they were the big things. (Robert Brault)",
+"When we are no longer able to change a situation, we are challenged to change ourselves. (Viktor Frankl)",
+"In the midst of winter, I found there was, within me, an invincible summer.(Albert Camus)",
+"Those who were seen dancing were thought to be insane by those who could not hear the music.(Friedrich Nietzsche)",
+"Gratitude unlocks the fullness of life. It turns what we have into enough, and more.(Melody Beattie)"
+];
+
+var btn = document.querySelector("button");
+var quoteBox = document.getElementById("box");
+var quoteText = document.getElementById("text");
+
+ function animation(){
+
+    // create random index from the quotes array:
+    var randomIndex = Math.floor(Math.random() * quotes.length);
+
+    
+    quoteText.innerText = quotes[randomIndex];
+
+    
+    
+    quoteBox.classList.remove("d-none");
+
+    
+    // show the animation again 
+	quoteBox.classList.remove("showQuote");
+    void quoteBox.offsetWidth;
+    quoteBox.classList.add("showQuote");
+    
+
+};	
 </script>
 </body>
 </html>

@@ -1,18 +1,38 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "glow_up_db");
+
+$conn = mysqli_connect("localhost", "root", "");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$name = $_POST['meal_name'];
-$cal = $_POST['calories'];
-$pro = $_POST['protein'];
+mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS glow_up_db");
+mysqli_select_db($conn, "glow_up_db");
 
-$sql = "INSERT INTO Diet (meal_name, calories, protein)
-        VALUES ('$name', $cal, $pro)";
+mysqli_query($conn, "CREATE TABLE IF NOT EXISTS Diet (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    meal_name VARCHAR(100),
+    calories INT,
+    protein INT
+)");
 
-mysqli_query($conn, $sql);
+$message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['meal_name'];
+    $cal = $_POST['calories'];
+    $pro = $_POST['protein'];
+
+    if ($name != "" && $cal != "" && $pro != "") {
+        $sql = "INSERT INTO Diet (meal_name, calories, protein)
+                VALUES ('$name', $cal, $pro)";
+        mysqli_query($conn, $sql);
+
+        $message = "Meal added successfully!";
+    } else {
+        $message = "Please fill in all fields.";
+    }
+}
 
 $result = mysqli_query($conn, "SELECT * FROM Diet");
 
@@ -21,16 +41,24 @@ $totalPro = 0;
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Meal Progress</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Meal Progress</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
+
 <div class="container my-5">
 
 <h2 class="text-center mb-4">Meal Progress</h2>
+
+<?php
+if ($message != "") {
+    echo "<div class='alert alert-info'>$message</div>";
+}
+?>
 
 <table class="table table-bordered table-striped bg-white">
 <tr>
@@ -42,8 +70,8 @@ $totalPro = 0;
 
 <?php
 while ($row = mysqli_fetch_assoc($result)) {
-    $totalCal += $row['calories'];
-    $totalPro += $row['protein'];
+    $totalCal = $totalCal + $row['calories'];
+    $totalPro = $totalPro + $row['protein'];
 
     echo "<tr>";
     echo "<td>".$row['id']."</td>";
@@ -53,20 +81,19 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "</tr>";
 }
 ?>
-
 </table>
 
 <h4>Total Calories: <?php echo $totalCal; ?> / 2000 kcal</h4>
 <div class="progress mb-3">
-    <div class="progress-bar bg-warning text-dark" style="width: <?php echo ($totalCal/2000)*100; ?>%">
-        <?php echo round(($totalCal/2000)*100); ?>%
+    <div class="progress-bar bg-warning text-dark" style="width: <?php echo ($totalCal / 2000) * 100; ?>%">
+        <?php echo round(($totalCal / 2000) * 100); ?>%
     </div>
 </div>
 
 <h4>Total Protein: <?php echo $totalPro; ?> / 100g</h4>
-<div class="progress mb-3">
-    <div class="progress-bar bg-warning text-dark" style="width: <?php echo ($totalPro/100)*100; ?>%">
-        <?php echo round(($totalPro/100)*100); ?>%
+<div class="progress mb-4">
+    <div class="progress-bar bg-warning text-dark" style="width: <?php echo ($totalPro / 100) * 100; ?>%">
+        <?php echo round(($totalPro / 100) * 100); ?>%
     </div>
 </div>
 
@@ -74,6 +101,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <a href="Diet.html" class="btn btn-outline-warning">Back to Diet</a>
 
 </div>
+
 </body>
 </html>
 

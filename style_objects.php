@@ -70,7 +70,7 @@ function displayStyles($styles) {
 
 <body class="bg-light">
 <div class="container my-5">
-    <h2 class="text-center mb-4">Style Information Using PHP Objects</h2>
+    <h2 class="text-center mb-4">Style Information</h2>
 
     <?php
     displayStyles($styles);

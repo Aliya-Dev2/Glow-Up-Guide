@@ -140,6 +140,9 @@
   <button type="button" onclick="stop()" class="btn btn-outline-warning">
     Pause
   </button>
+  <button type="button" onclick="reset()" class="btn btn-outline-warning">
+    reset
+  </button>
 </div>
        
         
@@ -260,6 +263,8 @@ var time= 0;
 
 function start() {
 
+  clearInterval(interval);
+
     // convert the time entered by user to seconds
 
   if (time == 0) {
@@ -313,6 +318,15 @@ function start() {
 // pause time when clicking pause btn
 function stop(){
   clearInterval(interval)
+}
+
+function reset(){
+  
+  clearInterval(interval);
+  document.getElementById("display").innerText = "00:00"
+  
+
+
 }
 
 
@@ -384,3 +398,4 @@ var quoteText = document.getElementById("text");
 </script>
 </body>
 </html>
+>

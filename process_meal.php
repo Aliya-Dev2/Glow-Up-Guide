@@ -18,7 +18,12 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS Diet (
 
 $message = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['clear'])) {
+    mysqli_query($conn, "DELETE FROM Diet");
+    $message = "All meals deleted!";
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['meal_name'])) {
     $name = $_POST['meal_name'];
     $cal = $_POST['calories'];
     $pro = $_POST['protein'];
@@ -38,6 +43,7 @@ $result = mysqli_query($conn, "SELECT * FROM Diet");
 
 $totalCal = 0;
 $totalPro = 0;
+
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +106,16 @@ while ($row = mysqli_fetch_assoc($result)) {
 <a href="calorieCounter.html" class="btn btn-warning">Add Another Meal</a>
 <a href="Diet.html" class="btn btn-outline-warning">Back to Diet</a>
 
+<form method="POST" style="display:inline;">
+    <button type="submit" name="clear" class="btn btn-danger">Clear All Meals</button>
+</form>
+
 </div>
+
+<script>
+localStorage.setItem("calories", "<?php echo $totalCal; ?>");
+localStorage.setItem("protein", "<?php echo $totalPro; ?>");
+</script>
 
 </body>
 </html>

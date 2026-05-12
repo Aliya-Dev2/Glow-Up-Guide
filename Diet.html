@@ -151,8 +151,8 @@ Daily Goal (3L)
 </div>
 
 </form>
+<br/>
 
-<a href="fitness_database.php" class="btn btn-outline-warning w-100 mt-3">Open Fitness DB</a>
 
 </div>
 </div>
@@ -225,7 +225,30 @@ document.getElementById("water-bar").innerText = Math.round(percent) + "%";
 document.getElementById("hydroMl").innerText = (water*1000) + "mL";
 }
 
+
+function updateDietBars() {
+    var cal = localStorage.getItem("calories") || 0;
+    var pro = localStorage.getItem("protein") || 0;
+
+    var calPercent = (cal / 2000) * 100;
+    var proPercent = (pro / 100) * 100;
+
+    document.getElementById("calBar").style.width = calPercent + "%";
+    document.getElementById("calBar").innerHTML = Math.round(calPercent) + "%";
+    document.getElementById("calLabel").innerHTML = "Calories (" + cal + "/2000 Kcal)";
+
+    document.getElementById("proBar").style.width = proPercent + "%";
+    document.getElementById("proBar").innerHTML = Math.round(proPercent) + "%";
+    document.getElementById("proLabel").innerHTML = "Protein (" + pro + "/100g)";
+}
+
+
 window.onload = updateWater;
+window.onload = function() {
+    updateWater();
+    updateDietBars();
+}
+
 
 </script>
 
